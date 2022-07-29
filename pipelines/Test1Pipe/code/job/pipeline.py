@@ -8,11 +8,11 @@ from job.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_IN1 = IN1(spark)
-    df_Source_1 = Source_1(spark)
-    df_Join_1 = Join_1(spark, df_IN1, df_Source_1)
+    df_IN2 = IN2(spark)
+    df_Join_1 = Join_1(spark, df_IN1, df_IN2)
     df_Filter_2 = Filter_2(spark, df_Join_1)
-    df_Source_2 = Source_2(spark)
-    df_Join_2 = Join_2(spark, df_Filter_2, df_Source_2)
+    df_IN3 = IN3(spark)
+    df_Join_2 = Join_2(spark, df_Filter_2, df_IN3)
     Target_1(spark, df_Join_2)
 
 def main():

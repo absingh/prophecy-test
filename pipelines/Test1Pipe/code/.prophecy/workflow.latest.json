@@ -127,8 +127,8 @@
       "id" : "8mdJgQWVyBAM32jXD4a-m$$_3mrxlgiqXlOQFz1IlgbD",
       "component" : "Source",
       "metadata" : {
-        "label" : "Source_2",
-        "slug" : "Source_2",
+        "label" : "IN3",
+        "slug" : "IN3",
         "x" : -521.9999999999998,
         "y" : 307.6000000000001,
         "phase" : 0,
@@ -145,7 +145,9 @@
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
       },
-      "properties" : { }
+      "properties" : {
+        "datasetId" : "2548/datasets/IN3"
+      }
     },
     "N9QresqJsqNPMYk60i0bI$$AiagdojwrQihyWG_WJ_HB" : {
       "id" : "N9QresqJsqNPMYk60i0bI$$AiagdojwrQihyWG_WJ_HB",
@@ -221,8 +223,8 @@
       "id" : "ZVUZESmf_Kzg412_aXrOF$$qXn8Ua6B33EcHx1XN9ohJ",
       "component" : "Source",
       "metadata" : {
-        "label" : "Source_1",
-        "slug" : "Source_1",
+        "label" : "IN2",
+        "slug" : "IN2",
         "x" : -1052.9999999999998,
         "y" : 247.60000000000008,
         "phase" : 0,
@@ -239,7 +241,9 @@
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
       },
-      "properties" : { }
+      "properties" : {
+        "datasetId" : "2548/datasets/IN2"
+      }
     },
     "5d_Mo5F5I_p455nP1h-n8$$NF4WOwBMm0nEAaIIf4S5i" : {
       "id" : "5d_Mo5F5I_p455nP1h-n8$$NF4WOwBMm0nEAaIIf4S5i",
