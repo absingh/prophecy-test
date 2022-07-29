@@ -13,7 +13,7 @@ def pipeline(spark: SparkSession) -> None:
     df_Filter_2 = Filter_2(spark, df_Join_1)
     df_IN3 = IN3(spark)
     df_Join_2 = Join_2(spark, df_Filter_2, df_IN3)
-    Target_1(spark, df_Join_2)
+    OUT1(spark, df_Join_2)
 
 def main():
     spark = SparkSession.builder\

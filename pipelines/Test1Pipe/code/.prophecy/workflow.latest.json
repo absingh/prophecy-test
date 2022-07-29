@@ -153,8 +153,8 @@
       "id" : "N9QresqJsqNPMYk60i0bI$$AiagdojwrQihyWG_WJ_HB",
       "component" : "Target",
       "metadata" : {
-        "label" : "Target_1",
-        "slug" : "Target_1",
+        "label" : "OUT1",
+        "slug" : "OUT1",
         "x" : -50.25,
         "y" : 116.00000000000006,
         "phase" : 0,
@@ -171,7 +171,9 @@
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
       },
-      "properties" : { }
+      "properties" : {
+        "datasetId" : "2548/datasets/OUT1"
+      }
     },
     "5MncjtyeipxWqyanu4UxY$$a0zuqgK-djJ4r9FqeF43h" : {
       "id" : "5MncjtyeipxWqyanu4UxY$$a0zuqgK-djJ4r9FqeF43h",
