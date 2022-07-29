@@ -7,10 +7,13 @@ from prophecy.utils import *
 from job.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_Source_1 = Source_1(spark)
-    df_Join_1 = Join_1(spark)
-    df_Source_2 = Source_2(spark)
     df_Source_0 = Source_0(spark)
+    df_Source_1 = Source_1(spark)
+    df_Join_1 = Join_1(spark, df_Source_0, df_Source_1)
+    df_Filter_2 = Filter_2(spark, df_Join_1)
+    df_Source_2 = Source_2(spark)
+    df_Join_2 = Join_2(spark, df_Filter_2, df_Source_2)
+    Target_1(spark, df_Join_2)
 
 def main():
     spark = SparkSession.builder\
