@@ -63,6 +63,37 @@
         "code" : ""
       }
     },
+    "ty8zpfLWPRdAiD26KDUWy" : {
+      "id" : "ty8zpfLWPRdAiD26KDUWy",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "Pipeline_1",
+        "slug" : "Pipeline",
+        "x" : -432,
+        "y" : 27.200000762939453
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "KLflJ58qW_YNNZCEPNsvL"
+        } ],
+        "outputs" : [ {
+          "id" : "SP3pvkUgp_Wl7-dmAMv11"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "",
+        "configurations" : [ ]
+      }
+    },
     "qxEADH2m4gLF1h1zQ5ntp" : {
       "id" : "qxEADH2m4gLF1h1zQ5ntp",
       "component" : "Pipeline",

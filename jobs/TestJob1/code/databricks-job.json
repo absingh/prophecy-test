@@ -11,6 +11,13 @@
   }, {
     "PipelineComponent" : {
       "id" : "",
+      "nodeName" : "Pipeline_1",
+      "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/pipelines/latest/2548/-1.0-py3-none-any.whl",
+      "language" : "python"
+    }
+  }, {
+    "PipelineComponent" : {
+      "id" : "",
       "nodeName" : "Pipeline_0",
       "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/pipelines/latest/2548/-1.0-py3-none-any.whl",
       "language" : "python"
@@ -55,6 +62,40 @@
         "spark_python_task" : {
           "python_file" : "dbfs:/FileStore/prophecy/artifacts/saas/app/scripts/latest/2548/TestJob1/Script_1--342935075.py"
         },
+        "email_notifications" : { },
+        "max_retries" : 0
+      }, {
+        "task_key" : "Pipeline_1",
+        "new_cluster" : {
+          "spark_version" : "10.4.x-scala2.12",
+          "node_type_id" : "i3.xlarge",
+          "spark_conf" : {
+            "prophecy.metadata.job.uri" : "2548/jobs/TestJob1",
+            "prophecy.metadata.fabric.id" : "808",
+            "prophecy.metadata.is.interactive.run" : "false",
+            "prophecy.execution.service.url" : "wss://execution.dp.app.prophecy.io/eventws",
+            "prophecy.metadata.pipeline.uri" : ""
+          },
+          "num_workers" : 1,
+          "driver_node_type_id" : "i3.xlarge"
+        },
+        "python_wheel_task" : {
+          "package_name" : "",
+          "entry_point" : "main",
+          "parameters" : [ "-C", "fabricName=dev" ]
+        },
+        "libraries" : [ {
+          "maven" : {
+            "coordinates" : "io.prophecy:prophecy-libs_2.12:4.0.8-3.2.0",
+            "repo" : "https://prophecyio.jfrog.io/artifactory/default-sbt-release/"
+          }
+        }, {
+          "pypi" : {
+            "package" : "prophecy-libs==1.1.11"
+          }
+        }, {
+          "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/pipelines/latest/2548/-1.0-py3-none-any.whl"
+        } ],
         "email_notifications" : { },
         "max_retries" : 0
       }, {
