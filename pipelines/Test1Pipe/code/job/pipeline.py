@@ -7,9 +7,9 @@ from prophecy.utils import *
 from job.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_Source_0 = Source_0(spark)
+    df_IN1 = IN1(spark)
     df_Source_1 = Source_1(spark)
-    df_Join_1 = Join_1(spark, df_Source_0, df_Source_1)
+    df_Join_1 = Join_1(spark, df_IN1, df_Source_1)
     df_Filter_2 = Filter_2(spark, df_Join_1)
     df_Source_2 = Source_2(spark)
     df_Join_2 = Join_2(spark, df_Filter_2, df_Source_2)
@@ -21,10 +21,11 @@ def main():
                 .config("spark.sql.legacy.allowUntypedScalaUDF", "true")\
                 .enableHiveSupport()\
                 .appName("Prophecy Pipeline")\
-                .getOrCreate()
+                .getOrCreate()\
+                .newSession()
     Utils.initializeFromArgs(spark, parse_args())
     spark.conf.set("prophecy.metadata.pipeline.uri", "2548/pipelines/Test1Pipe")
-    MetricsCollector.start(spark)
+    MetricsCollector.start(spark = spark, pipelineId = "2548/pipelines/Test1Pipe")
     pipeline(spark)
     MetricsCollector.end(spark)
 

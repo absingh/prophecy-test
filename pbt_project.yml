@@ -13,10 +13,23 @@ pipelines:
     language: python
     createdAt: '2022-07-29 06:18:03'
     datasets:
-      inputs: []
+      inputs:
+      - 2548/datasets/IN1
       outputs: []
     dependencies: {}
-datasets: {}
+datasets:
+  datasets/IN1:
+    name: IN1
+    description: ''
+    author: abhishek2.singh@airtel.com
+    createdAt: '2022-07-29 12:26:38'
+    physicalDatasets:
+      dev:
+        fabricId: 808
+        datasetType: File
+        description: ''
+        author: abhishek2.singh@airtel.com
+        createdAt: '2022-07-29 12:26:38'
 templates: {}
 jobs:
   jobs/TestJob1:
@@ -34,6 +47,7 @@ jobs:
       onSuccess: true
       onFailure: true
     pipelines: []
+    jobClusterMode: null
     enabled: null
     createdAt: '2022-07-29 06:16:18'
     author: abhishek2.singh@airtel.com

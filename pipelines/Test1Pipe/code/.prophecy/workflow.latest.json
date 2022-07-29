@@ -85,7 +85,6 @@
         "slug" : "Join_2",
         "x" : -268.25,
         "y" : 120.00000000000006,
-        "language" : "python",
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -132,7 +131,6 @@
         "slug" : "Source_2",
         "x" : -521.9999999999998,
         "y" : 307.6000000000001,
-        "language" : "python",
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -157,7 +155,6 @@
         "slug" : "Target_1",
         "x" : -50.25,
         "y" : 116.00000000000006,
-        "language" : "python",
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -182,7 +179,6 @@
         "slug" : "Join_1",
         "x" : -766.5000000000001,
         "y" : 258.49999999999994,
-        "language" : "python",
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -229,7 +225,6 @@
         "slug" : "Source_1",
         "x" : -1052.9999999999998,
         "y" : 247.60000000000008,
-        "language" : "python",
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -250,11 +245,10 @@
       "id" : "5d_Mo5F5I_p455nP1h-n8$$NF4WOwBMm0nEAaIIf4S5i",
       "component" : "Source",
       "metadata" : {
-        "label" : "Source_0",
-        "slug" : "Source_0",
+        "label" : "IN1",
+        "slug" : "IN1",
         "x" : -1047.9999999999998,
         "y" : 91.60000000000002,
-        "language" : "python",
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
@@ -269,7 +263,9 @@
         "selectedInputFields" : [ ],
         "isCustomOutputSchema" : false
       },
-      "properties" : { }
+      "properties" : {
+        "datasetId" : "2548/datasets/IN1"
+      }
     },
     "K_7OgZdnimdqD4Q4HAsAo$$QiQllHOhTBjw6Ok_xQI3Z" : {
       "id" : "K_7OgZdnimdqD4Q4HAsAo$$QiQllHOhTBjw6Ok_xQI3Z",
@@ -279,7 +275,6 @@
         "slug" : "Filter_2",
         "x" : -511.25,
         "y" : 131.00000000000006,
-        "language" : "python",
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
