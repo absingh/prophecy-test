@@ -1,0 +1,42 @@
+name: Test1
+description: ''
+version: 0.0.1
+author: abhishek2.singh@airtel.com
+language: python
+buildSystem: wheel
+pipelines:
+  pipelines/Test1Pipe:
+    name: Test1Pipe
+    description: ''
+    author: abhishek2.singh@airtel.com
+    mode: batch
+    language: python
+    createdAt: '2022-07-29 06:18:03'
+    datasets:
+      inputs: []
+      outputs: []
+    dependencies: {}
+datasets: {}
+templates: {}
+jobs:
+  jobs/TestJob1:
+    name: TestJob1
+    description: Tetsing Jobs
+    fabricUID: 808
+    scheduler:
+      Databricks: {}
+    jobSize: Small
+    scheduleCron: 0 0 0/1 * * ? *
+    timeout: null
+    alerting:
+      emails: abhishek2.singh@airtel.com
+      onStart: true
+      onSuccess: true
+      onFailure: true
+    pipelines: []
+    enabled: null
+    createdAt: '2022-07-29 06:16:18'
+    author: abhishek2.singh@airtel.com
+libraries: []
+subgraphs: {}
+dependencies: '[]'

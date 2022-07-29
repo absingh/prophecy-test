@@ -1,0 +1,99 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "808",
+    "jobId" : "2548/jobs/TestJob1",
+    "name" : "TestJob1",
+    "schedule" : "0 0 0/1 * * ? *",
+    "enabled" : false,
+    "defaultClusterSize" : "Small",
+    "alerting" : {
+      "emails" : "abhishek2.singh@airtel.com",
+      "onStart" : true,
+      "onSuccess" : true,
+      "onFailure" : true
+    },
+    "processDefaultSettings" : {
+      "type" : "Inherited",
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      }
+    },
+    "availableFabrics" : [ {
+      "id" : "808",
+      "name" : "dev",
+      "clusterSizes" : {
+        "default" : "Small",
+        "availableClusterSizes" : [ "Small" ]
+      }
+    } ]
+  },
+  "processes" : {
+    "W5QX4dmjC96BU8sxDT0XI" : {
+      "id" : "W5QX4dmjC96BU8sxDT0XI",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script",
+        "x" : 280,
+        "y" : 160
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "9-pF53ipQgaAFeIXsM8t1"
+        } ],
+        "outputs" : [ {
+          "id" : "AIWO0b4Xgn53tLmDvMp_J"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "code" : ""
+      }
+    },
+    "qxEADH2m4gLF1h1zQ5ntp" : {
+      "id" : "qxEADH2m4gLF1h1zQ5ntp",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "Pipeline_0",
+        "slug" : "Pipeline",
+        "x" : 128,
+        "y" : 146
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "hY3H9aBSSe-1rObegYt5Z"
+        } ],
+        "outputs" : [ {
+          "id" : "yjKVQC44hUwnHgEL2pAgG"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "",
+        "configurations" : [ ]
+      }
+    }
+  },
+  "connections" : [ ]
+}

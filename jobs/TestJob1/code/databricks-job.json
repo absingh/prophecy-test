@@ -1,0 +1,102 @@
+{
+  "fabricId" : "808",
+  "components" : [ {
+    "ScriptComponent" : {
+      "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/scripts/latest/2548/TestJob1/Script_1--342935075.py",
+      "nodeName" : "Script_1",
+      "id" : "W5QX4dmjC96BU8sxDT0XI",
+      "language" : "python",
+      "content" : ""
+    }
+  }, {
+    "PipelineComponent" : {
+      "id" : "",
+      "nodeName" : "Pipeline_0",
+      "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/pipelines/latest/2548/.jar",
+      "language" : "scala"
+    }
+  } ],
+  "request" : {
+    "CreateNewJobRequest" : {
+      "format" : "MULTI_TASK",
+      "name" : "TestJob1",
+      "job_clusters" : [ {
+        "job_cluster_key" : "Small-79996135",
+        "new_cluster" : {
+          "spark_version" : "10.4.x-scala2.12",
+          "node_type_id" : "i3.xlarge",
+          "spark_conf" : {
+            "prophecy.metadata.job.uri" : "2548/jobs/TestJob1",
+            "prophecy.metadata.fabric.id" : "808",
+            "prophecy.execution.service.url" : "wss://execution.dp.app.prophecy.io/eventws"
+          },
+          "num_workers" : 1,
+          "driver_node_type_id" : "i3.xlarge"
+        }
+      } ],
+      "email_notifications" : {
+        "on_start" : [ "abhishek2.singh@airtel.com" ],
+        "on_success" : [ "abhishek2.singh@airtel.com" ],
+        "on_failure" : [ "abhishek2.singh@airtel.com" ]
+      },
+      "tasks" : [ {
+        "task_key" : "Script_1",
+        "new_cluster" : {
+          "spark_version" : "10.4.x-scala2.12",
+          "node_type_id" : "i3.xlarge",
+          "spark_conf" : {
+            "prophecy.metadata.job.uri" : "2548/jobs/TestJob1",
+            "prophecy.metadata.fabric.id" : "808",
+            "prophecy.execution.service.url" : "wss://execution.dp.app.prophecy.io/eventws"
+          },
+          "num_workers" : 1,
+          "driver_node_type_id" : "i3.xlarge"
+        },
+        "spark_python_task" : {
+          "python_file" : "dbfs:/FileStore/prophecy/artifacts/saas/app/scripts/latest/2548/TestJob1/Script_1--342935075.py"
+        },
+        "email_notifications" : { },
+        "max_retries" : 0
+      }, {
+        "task_key" : "Pipeline_0",
+        "new_cluster" : {
+          "spark_version" : "10.4.x-scala2.12",
+          "node_type_id" : "i3.xlarge",
+          "spark_conf" : {
+            "prophecy.metadata.job.uri" : "2548/jobs/TestJob1",
+            "prophecy.metadata.fabric.id" : "808",
+            "prophecy.metadata.is.interactive.run" : "false",
+            "prophecy.execution.service.url" : "wss://execution.dp.app.prophecy.io/eventws",
+            "prophecy.metadata.pipeline.uri" : ""
+          },
+          "num_workers" : 1,
+          "driver_node_type_id" : "i3.xlarge"
+        },
+        "spark_jar_task" : {
+          "main_class_name" : "Main",
+          "parameters" : [ "-C", "fabricName=dev" ]
+        },
+        "libraries" : [ {
+          "maven" : {
+            "coordinates" : "io.prophecy:prophecy-libs_2.12:4.0.8-3.2.0",
+            "repo" : "https://prophecyio.jfrog.io/artifactory/default-sbt-release/"
+          }
+        }, {
+          "pypi" : {
+            "package" : "prophecy-libs==1.1.11"
+          }
+        }, {
+          "jar" : "dbfs:/FileStore/prophecy/artifacts/saas/app/pipelines/latest/2548/.jar"
+        } ],
+        "email_notifications" : { },
+        "max_retries" : 0
+      } ],
+      "max_concurrent_runs" : 1,
+      "schedule" : {
+        "quartz_cron_expression" : "0 0 0/1 * * ? *",
+        "timezone_id" : "GMT",
+        "pause_status" : "PAUSED"
+      }
+    }
+  }
+}
