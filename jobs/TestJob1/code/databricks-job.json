@@ -12,8 +12,8 @@
     "PipelineComponent" : {
       "id" : "",
       "nodeName" : "Pipeline_0",
-      "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/pipelines/latest/2548/.jar",
-      "language" : "scala"
+      "path" : "dbfs:/FileStore/prophecy/artifacts/saas/app/pipelines/latest/2548/-1.0-py3-none-any.whl",
+      "language" : "python"
     }
   } ],
   "request" : {
@@ -72,8 +72,9 @@
           "num_workers" : 1,
           "driver_node_type_id" : "i3.xlarge"
         },
-        "spark_jar_task" : {
-          "main_class_name" : "Main",
+        "python_wheel_task" : {
+          "package_name" : "",
+          "entry_point" : "main",
           "parameters" : [ "-C", "fabricName=dev" ]
         },
         "libraries" : [ {
@@ -86,7 +87,7 @@
             "package" : "prophecy-libs==1.1.11"
           }
         }, {
-          "jar" : "dbfs:/FileStore/prophecy/artifacts/saas/app/pipelines/latest/2548/.jar"
+          "whl" : "dbfs:/FileStore/prophecy/artifacts/saas/app/pipelines/latest/2548/-1.0-py3-none-any.whl"
         } ],
         "email_notifications" : { },
         "max_retries" : 0
